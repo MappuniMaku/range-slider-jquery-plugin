@@ -43,7 +43,7 @@ function createAnalytics () {
     }
 }
 
-window.analytics = createAnalytics();
+// window.analytics = createAnalytics();
 
 $(document).ready(function() {
     console.log('jQuery loaded');

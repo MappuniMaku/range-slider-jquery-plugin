@@ -8,11 +8,14 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: './index.js'
+        main: './index.ts'
     },
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
+    },
+    resolve: {
+        extensions: [ '.tsx', '.ts', '.js' ],
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -31,6 +34,11 @@ module.exports = {
     ],
     module: {
         rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
             {
                 test: /\.pug$/,
                 loader: 'pug-loader',

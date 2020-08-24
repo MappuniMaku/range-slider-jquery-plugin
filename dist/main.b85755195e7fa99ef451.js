@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./index.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -99,12 +99,12 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ "../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/resolve-url-loader/index.js?!../node_modules/sass-loader/dist/cjs.js?!./styles.sass":
 /*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js??ref--6-2!../node_modules/postcss-loader/src??ref--6-3!../node_modules/resolve-url-loader??ref--6-4!../node_modules/sass-loader/dist/cjs.js??ref--6-5!./styles.sass ***!
+  !*** ../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js??ref--7-2!../node_modules/postcss-loader/src??ref--7-3!../node_modules/resolve-url-loader??ref--7-4!../node_modules/sass-loader/dist/cjs.js??ref--7-5!./styles.sass ***!
   \*************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./styles.sass?../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js??ref--6-2!../node_modules/postcss-loader/src??ref--6-3!../node_modules/resolve-url-loader??ref--6-4!../node_modules/sass-loader/dist/cjs.js??ref--6-5");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./styles.sass?../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js??ref--7-2!../node_modules/postcss-loader/src??ref--7-3!../node_modules/resolve-url-loader??ref--7-4!../node_modules/sass-loader/dist/cjs.js??ref--7-5");
 
 /***/ }),
 
@@ -120,27 +120,27 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 
 /***/ }),
 
-/***/ "./index.js":
+/***/ "./index.ts":
 /*!******************!*\
-  !*** ./index.js ***!
+  !*** ./index.ts ***!
   \******************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _styles_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.sass */ \"./styles.sass\");\n/* harmony import */ var _styles_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_sass__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slider */ \"./slider.js\");\n\n\n\n\nlet slider = new _slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('slider');\nconsole.log(slider.getName());\nlet counter = {\n  value: 0,\n  add: function () {\n    this.value += 1;\n  },\n  getValue: function () {\n    return this.value;\n  }\n};\nconsole.log(counter.getValue());\n\nfunction createAnalytics() {\n  let counter = 0;\n  let isDestroyed = false;\n\n  const listener = () => counter += 1;\n\n  document.addEventListener('click', listener);\n  return {\n    destroy() {\n      document.removeEventListener('click', listener);\n      isDestroyed = true;\n    },\n\n    getClicks() {\n      if (isDestroyed) {\n        return 'destroyed';\n      }\n\n      return counter;\n    }\n\n  };\n}\n\nwindow.analytics = createAnalytics();\n$(document).ready(function () {\n  console.log('jQuery loaded');\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _styles_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.sass */ \"./styles.sass\");\n/* harmony import */ var _styles_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_sass__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slider */ \"./slider.ts\");\n\r\n\r\n\r\nvar slider = new _slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"]('slider');\r\nconsole.log(slider.getName());\r\nvar counter = {\r\n    value: 0,\r\n    add: function () {\r\n        this.value += 1;\r\n    },\r\n    getValue: function () {\r\n        return this.value;\r\n    }\r\n};\r\nconsole.log(counter.getValue());\r\nfunction createAnalytics() {\r\n    var counter = 0;\r\n    var isDestroyed = false;\r\n    var listener = function () { return counter += 1; };\r\n    document.addEventListener('click', listener);\r\n    return {\r\n        destroy: function () {\r\n            document.removeEventListener('click', listener);\r\n            isDestroyed = true;\r\n        },\r\n        getClicks: function () {\r\n            if (isDestroyed) {\r\n                return 'destroyed';\r\n            }\r\n            return counter;\r\n        }\r\n    };\r\n}\r\n// window.analytics = createAnalytics();\r\n$(document).ready(function () {\r\n    console.log('jQuery loaded');\r\n});\r\n\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./index.ts?");
 
 /***/ }),
 
-/***/ "./slider.js":
+/***/ "./slider.ts":
 /*!*******************!*\
-  !*** ./slider.js ***!
+  !*** ./slider.ts ***!
   \*******************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Slider; });\nclass Slider {\n  constructor(name) {\n    this.name = name;\n  }\n\n  getName() {\n    return this.name;\n  }\n\n}\n;\n\n//# sourceURL=webpack:///./slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar Slider = /** @class */ (function () {\r\n    function Slider(name) {\r\n        // this.name = name\r\n    }\r\n    Slider.prototype.getName = function () {\r\n        // return this.name;\r\n        return 'fdfsf';\r\n    };\r\n    return Slider;\r\n}());\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (Slider);\r\n;\r\n\n\n//# sourceURL=webpack:///./slider.ts?");
 
 /***/ }),
 
@@ -151,7 +151,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js??ref--6-2!../node_modules/postcss-loader/src??ref--6-3!../node_modules/resolve-url-loader??ref--6-4!../node_modules/sass-loader/dist/cjs.js??ref--6-5!./styles.sass */ \"../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/resolve-url-loader/index.js?!../node_modules/sass-loader/dist/cjs.js?!./styles.sass\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./styles.sass?");
+eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js??ref--7-2!../node_modules/postcss-loader/src??ref--7-3!../node_modules/resolve-url-loader??ref--7-4!../node_modules/sass-loader/dist/cjs.js??ref--7-5!./styles.sass */ \"../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js?!../node_modules/postcss-loader/src/index.js?!../node_modules/resolve-url-loader/index.js?!../node_modules/sass-loader/dist/cjs.js?!./styles.sass\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./styles.sass?");
 
 /***/ })
 
