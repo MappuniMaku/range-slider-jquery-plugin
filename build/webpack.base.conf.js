@@ -4,15 +4,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const PATHS = {
+    src: path.resolve(__dirname, '../src'),
+    dist: path.resolve(__dirname, '../docs')
+};
+
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
+    externals: {
+        paths: PATHS,
+    },
+    context: PATHS.src,
     mode: 'development',
     entry: {
         main: './index.ts'
     },
     output: {
         filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        path: PATHS.dist
     },
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
@@ -75,5 +83,8 @@ module.exports = {
                 ],
             },
         ]
+    },
+    devServer: {
+        port: 4200
     }
 };
